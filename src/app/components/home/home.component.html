@@ -2,8 +2,11 @@
   <div class="container">
     <h1>Property Listings</h1>
     <p>Access the hottest properties available</p>
-    <a href="">
+    <a (click)="loginWithGoogle()" *ngIf="!this.isLoggedIn">
       <img src="assets/img/btn_google_signin_dark_normal_web@2x.png" alt="Login with Google" width="20%">
     </a>
+    <div *ngIf="this.isLoggedIn" class="alert alert-info">
+      You are successfully logged in through <strong>Google</strong>
+    </div>
   </div>
 </div>
